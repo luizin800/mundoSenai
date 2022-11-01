@@ -1,3 +1,23 @@
+<?php
+
+
+
+if (isset($_POST['submit'])) {
+
+  print_r($_POST['txtNome']);
+
+  include_once('config.php');
+
+  $nome = $_POST['nome'];
+  $idade = $_POST['idade'];
+  $telefone = $_POST['telefone'];
+  $email = $_POST['email'];
+
+  $result = mysqli_query($conexao, "INSERT INTO pessoa(nome, idade, telefone, email)
+VALUES ('$nome','$idade','$telefone','$email')");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +30,7 @@
 </head>
 
 <body>
-  <form>
+  <form action="index.php" method="$_POST">
     <div id="fichaCadastral">
       <div id="imgSetaEsquerda">
         <img src="./img/imgSetaEsquerda.svg" alt="" />
@@ -52,15 +72,15 @@
         <img src="./img/imgLogoSesiSenai.svg" alt="" />
       </div>
 
-      <input id="txtNome" type="text" placeholder="Nome Completo" /><br />
+      <input id="txtNome" name="nome" type="text" placeholder="Nome Completo" /><br />
 
-      <input id="txtIdade" type="number" placeholder="Idade" /><br />
+      <input id="txtIdade" name="idade" type="number" placeholder="Idade" /><br />
 
-      <input id="txtTelefone" type="text" placeholder="Telefone" /><br />
+      <input id="txtTelefone" name="telefone" type="text" placeholder="Telefone" /><br />
 
-      <input id="txtEmail" type="text" placeholder="E-mail" /><br />
+      <input id="txtEmail" name="email" type="text" placeholder="E-mail" /><br />
 
-      <button id="btnSalvar">Salvar</button>
+      <input type="submit" name="submit" id="btnSalvar">
       <button id="btnListar">Listar</button>
     </div>
   </form>
@@ -75,28 +95,12 @@
     $nome = addslashes($_POST['nome']);
   }
 
-  if (isset($_POST['telefone']) && !empty($_POST['telefone'])) {
-    $telefone = addslashes($_POST['telefone']);
-  }
-
   if (isset($_POST['idade']) && !empty($_POST['idade'])) {
     $idade = addslashes($_POST['idade']);
   }
 
-  $dbHost = 'Localhost';
-  $dbUsername = 'root';
-  $dbPassword = '';
-  $dbName = 'fichacadastro2';
-  $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-  if (isset($_POST['submit'])) {
-    include_once('config.php');
-    $email = $_POST['email'];
-    $nome = $_POST['nome'];
-    $telefone = $_POST['telefone'];
-    $idade = $_POST['idade'];
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(email,nome,telefone,idade)
-    VALUES ('$email','$nome','$telefone','$idade')");
+  if (isset($_POST['telefone']) && !empty($_POST['telefone'])) {
+    $telefone = addslashes($_POST['telefone']);
   }
   ?>
 </body>
