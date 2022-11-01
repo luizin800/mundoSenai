@@ -1,0 +1,188 @@
+/* Ficha Cadastral */
+:root {
+  background: linear-gradient(107.56deg, #960743 0%, #020062 100%);
+}
+
+#fichaCadastral {
+  box-sizing: border-box;
+  position: relative;
+  width: 1280px;
+  height: 720px;
+}
+
+#txtNome {
+  position: absolute;
+  width: 496px;
+  height: 41px;
+  left: 470px;
+  top: 234px;
+
+  background: #d9d9d9;
+  border-radius: 50px;
+}
+
+::placeholder {
+  text-align: center;
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #242121;
+
+  mix-blend-mode: normal;
+}
+
+input {
+  font-size: 18px;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+#txtIdade {
+  position: absolute;
+  width: 496px;
+  height: 42px;
+  left: 470px;
+  top: 289px;
+
+  background: #d9d9d9;
+  border-radius: 50px;
+}
+
+#txtTelefone {
+  position: absolute;
+  width: 496px;
+  height: 41px;
+  left: 470px;
+  top: 344px;
+
+  background: #d9d9d9;
+  border-radius: 50px;
+}
+
+#txtEmail {
+  position: absolute;
+  width: 496px;
+  height: 41px;
+  left: 470px;
+  top: 400px;
+
+  background: #d9d9d9;
+  border-radius: 50px;
+}
+
+#btnListar {
+  position: absolute;
+  width: 188px;
+  height: 50px;
+  left: 750px;
+  top: 516px;
+
+  background: #d9d9d9;
+
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  border-radius: 15px;
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+  border: 1px solid #ffffff;
+}
+
+#btnSalvar {
+  position: absolute;
+  width: 188px;
+  height: 50px;
+  left: 490px;
+  top: 516px;
+
+  background: #d9d9d9;
+
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  border-radius: 15px;
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+  border: 1px solid #ffffff;
+}
+
+#imgSetaEsquerda img {
+  position: absolute;
+  width: 199.51px;
+  height: 155.39px;
+  left: 200px;
+  top: 130px;
+}
+
+#imgSetasSuperior img {
+  /* imgSetasSuperior */
+
+  position: absolute;
+  width: 205px;
+  height: 78px;
+  left: 58px;
+  top: 26px;
+}
+
+#imgLogoMundoSenai svg {
+  position: absolute;
+  width: 430px;
+  height: 171px;
+  left: 520px;
+  top: 8px;
+}
+
+#imgTriangulo img {
+  position: absolute;
+  width: 290.87px;
+  height: 300.85px;
+  left: 30px;
+  top: 250.61px;
+}
+
+#imgMapa img {
+  position: absolute;
+  width: 546px;
+  height: 230px;
+  left: 850px;
+  top: 454px;
+}
+
+#imgGlobo img {
+  position: absolute;
+  width: 444.53px;
+  height: 341.63px;
+  left: 1050px;
+}
+
+#imgSetas {
+  position: absolute;
+  width: 358.35px;
+  height: 129.6px;
+  left: 1080.48px;
+  top: 143.19px;
+
+  border-radius: 94px;
+}
+
+#imgLogoSesiSenai img {
+  position: absolute;
+  width: 333px;
+  height: 64px;
+  left: 29px;
+  top: 603px;
+}
